@@ -13,7 +13,7 @@
         <!--<link rel='stylesheet' type='text/css' href='css/css.css'>-->
         
         <!--FontAwesome.-->
-        <!--<script src="https://kit.fontawesome.com/f08dd09bd3.js" crossorigin="anonymous"></script>-->
+        <script src="https://kit.fontawesome.com/f08dd09bd3.js" crossorigin="anonymous"></script>
         
         <!--External fonts.-->
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Open+Sans&display=swap" rel="stylesheet">
@@ -106,23 +106,94 @@
 
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
         }
         
         /*NAVBAR*/
+        /*container for all items*/
         .divContainer {
             display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
         }
+        /*container for google symbol*/
         .googleSymbol {
-
+            order: 1;
+            margin-left: 30px;
+            margin-top: 30px;
+            margin-right: 60px;
         }
+        /*image from navbar*/
+        #googleNav {
+            width: 96px;
+            height: 32px;
+        }
+        /*container for search box*/
         .searchBox {
+            order: 2;
+            font-size: 16px;
+            margin-left: 10px;
+        }
+        /*form itself*/
+        #searchBar{
+            margin-top: 20px;
+            border: 1px solid #dadddf;
+            border-radius: 50px;
+        }
+        #searchBar:hover {
+            box-shadow: 0 0 20px #dadddf;
+        }
+        /*input placeholder*/
+        #searchHolder {
+            border: none;
+            font-size: 16px;
+            /*if padding and not margins, border bug*/
+            margin-left: 20px;
+            margin-top: 0px;
+            margin-bottom: 10px;
+            width: 600px;
+        }
+        /*build this webpage text*/
+        #searchHolder::placeholder{
+            color:black;
+            /*firefox*/
+            opacity: 1;
+        }
+        /*button reset*/
+        #buttonReset {
+            border: none;
+            background-color: white;
+            cursor: pointer;
+        }
+        /*button search*/
+        #buttonSearch {
+            border: none;
+            margin-right: 20px;
+            border-left: 1px solid #dadddf;
+            background-color: White;
+            height: 35px;
+            cursor: pointer;
+        }
 
+        /*reset symbol*/
+        .fa-times {
+            margin-right: 10px;
+            margin-top: 15px;
+            font-size: 24px;
+            color: #80868b;
+        }
+        /*search symbol*/
+        .fa-search{
+            margin-left: 10px;
+            font-size: 24px;
+            color: #4285f4;
         }
         .userSymbol {
-
+            order: 3;
         }
         .symbolsRow {
-
+            order: 5;
         }
 
         /*TOTAL RESULTS LINE*/
@@ -190,9 +261,17 @@
         <!--container with all items-->
         <div class="divContainer">
             <!--google symbol-->
-            <div class="googleSymbol">google symbol</div>
+            <div class="googleSymbol">
+                <img id="googleNav"src="images/googleLogo.png" alt="Google Symbol">
+            </div>
             <!--search box-->
-            <div class="searchBox">search box</div>
+            <div class="searchBox">
+                <form id="searchBar">
+                    <input id="searchHolder" type="text" placeholder="build this webpage" name="search">
+                    <button id="buttonReset" type="reset" name="reset"><i class="fas fa-times"></i></i></button>
+                    <button id="buttonSearch" type="submit" name="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
             <!--user symbol-->
             <div class="userSymbol">user symbol</div>
             <!--symbolsRow-->
