@@ -109,7 +109,7 @@
             margin: 0;
         }
         
-        /*NAVBAR*/
+        /*START NAVBAR*/
         /*container for all items*/
         .divContainer {
             display: flex;
@@ -175,7 +175,6 @@
             height: 35px;
             cursor: pointer;
         }
-
         /*reset symbol*/
         .fa-times {
             margin-right: 10px;
@@ -189,13 +188,74 @@
             font-size: 24px;
             color: #4285f4;
         }
-        .userSymbol {
+        /*END NAVBAR*/
+        
+        
+        /*START RIGHT SYMBOLS NAV*/
+        /*multi squares symbol*/
+        .menuSymbol {
             order: 3;
+            font-size: 24px;
+            color: #80868b;
+            margin-top: 35px;
+            /*this item needs to have auto value to push other item to the end*/
+            margin-left: auto;
+            margin-right: 20px;
+            cursor: pointer;
         }
+        .fa-th:hover {
+            box-shadow: 0 0 20px #a9acad;
+        }
+        /*user initial image container*/
+        .userSymbol {
+            order: 4;
+            margin-top: 32px;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+        /*image itself*/
+        #googleUser {
+            height: 32px;
+            width: 32px;
+            border-radius: 50%;
+        }
+        #googleUser:hover {
+            box-shadow: 0 0 20px #a9acad;
+        }
+        /*END RIGHT SYMBOLS NAV*/
+
+        
+        /*START 2ND ROW SYMBOLS*/
         .symbolsRow {
-            order: 5;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            padding: 16px 12px 12px 10px;
+        }
+        .itemsRow {
+            font-size: 16px;
+            text-decoration: none;
+            color: #5f6368;
+        }
+        .itemsRow:visited {
+
+        }
+        /*All symbols from row*/
+        .sy {
+            font-size: 18px;
         }
 
+        #all {
+            margin-left: 200px;
+        }
+        #allSymbol {
+            font-size: 18px;
+        }
+
+        /*END 2ND ROW SYMBOLS*/
+
+        
         /*TOTAL RESULTS LINE*/
         .totalResults {
 
@@ -257,7 +317,7 @@
     </head>
 
     <body>
-        <!--NAVBAR-->
+        <!--START NAVBAR-->
         <!--container with all items-->
         <div class="divContainer">
             <!--google symbol-->
@@ -272,11 +332,31 @@
                     <button id="buttonSearch" type="submit" name="submit"><i class="fa fa-search"></i></button>
                 </form>
             </div>
-            <!--user symbol-->
-            <div class="userSymbol">user symbol</div>
-            <!--symbolsRow-->
-            <div class="symbolsRow">symbols row</div>
+            <!--END NAV BAR-->
+            
+            <!--START RIGHT SYMBOLS NAV-->
+            <!--menu symbol-->
+            <div class="menuSymbol"><i class="fas fa-th"></i></div>
+            <!--user image-->
+            <div class="userSymbol">
+                <img id="googleUser"src="images/nameSymbol.png" alt="Google User Inital">
+            </div>
         </div>
+            <!--END RIGHT SYMBOLS NAV-->
+        
+            
+        <!--START 2ND ROW SYMBOLS-->
+            <div class="symbolsRow">
+                <a id="all" class="itemsRow" href="" target="_blank"><i id="allSymbol"class="fa fa-search"></i>All</a>
+                <a class="itemsRow" href="" target="_blank"><i class="sy fas fa-map-marker-alt"></i>Maps</a>
+                <a class="itemsRow" href="" target="_blank"><i class="sy far fa-newspaper"></i>News</a>
+                <a class="itemsRow" href="" target="_blank"><i class="sy fab fa-youtube"></i>Videos</a>
+                <a class="itemsRow" href="" target="_blank"><i class="sy far fa-image"></i>Images</a>
+                <a class="itemsRow" href="" target="_blank"><i class="sy fas fa-ellipsis-v"></i>More</a>
+                <a class="itemsRow" href="" target="_blank">Settings</a>
+                <a class="itemsRow" href="" target="_blank">Tools</a>        
+            </div>
+        
         
         <!--TOTAL RESULTS LINE-->
         <div class="totalResults">total results</div>
