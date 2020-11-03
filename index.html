@@ -152,7 +152,7 @@
             margin-left: 20px;
             margin-top: 0px;
             margin-bottom: 10px;
-            width: 600px;
+            width: 700px;
         }
         /*build this webpage text*/
         #searchHolder::placeholder{
@@ -231,41 +231,84 @@
             flex-direction: row;
             flex-wrap: nowrap;
             justify-content: flex-start;
-            padding: 16px 12px 12px 10px;
+            padding: 16px 12px 0px 10px;
+            border-bottom: 1px solid #dadddf;
         }
         .itemsRow {
             font-size: 16px;
             text-decoration: none;
             color: #5f6368;
         }
-        .itemsRow:visited {
-
-        }
-        /*All symbols from row*/
+        /*all symbols <i> from row*/
         .sy {
             font-size: 18px;
+            margin-left: 30px;
+            margin-right: 5px;
+            margin-bottom: 15px;
+            margin-top: 20px;
         }
-
+        /*magnifying glass*/
         #all {
             margin-left: 200px;
+            border-bottom: 3px solid #4285f4;
+            margin-top: 20px;
+            color: #4285f4;
         }
         #allSymbol {
             font-size: 18px;
+            margin-right: 5px;
         }
-
+        /*settings link*/
+        #settings {
+            margin-left: 140px;
+        }
         /*END 2ND ROW SYMBOLS*/
 
         
         /*TOTAL RESULTS LINE*/
         .totalResults {
-
+            color: #5f6368;
+            margin-left: 220px;
         }
 
-        /*SEARCH RESULT BLOCK*/
+        
+        /*START SEARCH RESULT BLOCK*/
+        /*container itself*/
         .searchResult {
-
+            font-size: 16px;
+            margin-left: 220px;
+            line-height: 0.8;
+            margin-top: 30px;
+            margin-bottom: 45px;
         }
+        /*first part, the website*/
+        cite {
+            font-style: normal;
+            color: #202124;
+        }
+        /*the rest of lines are paragraphs*/
+        p {
+            color: #5f6368;
+        }
+        /*the <a> inside the block*/
+        .blockLink {
+            color: #1a0dab;
+            font-size: 24px;
+            text-decoration: none;
+        }
+        /*the <a> inside the block underline when hover*/
+        .blockLink:hover {
+            text-decoration: underline;
+        }
+        /*inverted triangle at the end of some 1st p*/
+        .fa-sort-down
+        {
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        /*END SEARCH RESULT BLOCK*/
 
+        
         /*VIDEOS DIV*/
         .videosContainer {
 
@@ -353,17 +396,30 @@
                 <a class="itemsRow" href="" target="_blank"><i class="sy fab fa-youtube"></i>Videos</a>
                 <a class="itemsRow" href="" target="_blank"><i class="sy far fa-image"></i>Images</a>
                 <a class="itemsRow" href="" target="_blank"><i class="sy fas fa-ellipsis-v"></i>More</a>
-                <a class="itemsRow" href="" target="_blank">Settings</a>
-                <a class="itemsRow" href="" target="_blank">Tools</a>        
+                <a id="settings"class="itemsRow sy" href="" target="_blank">Settings</a>
+                <a class="itemsRow sy" href="" target="_blank">Tools</a>        
             </div>
         
         
         <!--TOTAL RESULTS LINE-->
-        <div class="totalResults">total results</div>
+        <div class="totalResults">
+            <p>About 98.200.000 results (0,71 seconds)</p>
+        </div>
         
         <!--SEARCH RESULT 1 & 2-->
-        <div class="searchResult">search result 1</div>
-        <div class="searchResult">search result 2</div>
+        <div class="searchResult">
+            <p><cite>victor-lf.github.io</cite> › google-search-results<i class="fas fa-sort-down"></i></p>
+            <a class="blockLink "href="" target="_blank">build this webpage - GitHub Pages</a>
+            <p><b>build this webpage</b>. https://benjdelt.github.io/google-results/. With zero coding experience, artist</p>
+            <p>building 180 webpages in 180 days ...</p>
+        </div>
+        
+        <div class="searchResult">
+            <p><cite>christine-27.github.io</cite> › google-homepage<i class="fas fa-sort-down"></i></p>
+            <a class="blockLink "href="" target="_blank">build this webpage - GitHub Pages</a>
+            <p>With zero coding experience, artist <b>building</b> 180 <b>webpages</b> in 180 days. hhttps://</p>
+            <p>parstechnica.com/.../with-zero-coding-experience-artist-<b>building</b>-180-<b>webpages</b> -.</p>
+        </div>
         
         <!--VIDEOS DIV-->
         <div class="videosContainer">
@@ -376,26 +432,99 @@
         </div>
 
         <!--SEARCH RESULT 3 & 4-->
-        <div class="searchResult">search result 3</div>
-        <div class="searchResult">search result 4</div>
-
-        <!--PEOPLE ALSO ASK LIST-->
-        <div class="peopleContainer">
-            <div class="peopleList"></div>
+        <div class="searchResult">
+            <p><cite>www.websitebuilderexpert.com</cite> › building-websites</p>
+            <a class="blockLink "href="" target="_blank">
+                How to Build a Website 2020 | The Complete Beginner's Guide</a>
+            <p>Oct 22, 2020 — How to <b>Build</b> a <b>Website</b> from Scratch. We'll look at 
+                how to make a <b>website</b> with</p>
+            <p>both a <b>website</b> builder and WordPress, with no steps left out.</p>
+        </div>
+        
+        <div class="searchResult">
+            <p><cite>www.pcmag.com</cite>› ... › Web Hosting<i class="fas fa-sort-down"></i></p>
+            <a class="blockLink "href="" target="_blank">How to Create a Website | PCMag</a>
+            <p>You can use an online service to create <b>web</b> pages, or <b>build</b> it offline using a desktop software </p>
+            <p>tool. Or, if you're a coding dynamo, use a plain text editor to create a ...</p>
         </div>
 
         <!--SEARCH RESULT 5 to 15-->
-        <div class="searchResult">search result 5</div>
-        <div class="searchResult">search result 6</div>
-        <div class="searchResult">search result 7</div>
-        <div class="searchResult">search result 8</div>
-        <div class="searchResult">search result 9</div>
-        <div class="searchResult">search result 10</div>
-        <div class="searchResult">search result 11</div>
-        <div class="searchResult">search result 12</div>
-        <div class="searchResult">search result 13</div>
-        <div class="searchResult">search result 14</div>
-        <div class="searchResult">search result 15</div>
+        <div class="searchResult">
+            <p><cite>www.squarespace.com</cite><i class="fas fa-sort-down"></i></p>
+            <a class="blockLink "href="" target="_blank">Squarespace: Build a Website – Website Builder</a>
+            <p>Squarespace is the all-in-one solution for anyone looking to create a beautiful <b>website</b>.</p>
+            <p>Domains, eCommerce, hosting, galleries, analytics, and 24/7 support all ...</p>
+        </div>
+        
+        <div class="searchResult">
+            <p><cite>websitesetup.org</cite><i class="fas fa-sort-down"></i></p>
+            <a class="blockLink "href="" target="_blank">How to Create a Website: Step-by-Step Guide for Beginners ...</a>
+            <p>Mar 11, 2020 — Learn how to make a <b>website</b>  and set it up. This site contains different tutorials </p>
+            <p>on how to <b>build</b> a <b>website</b>  using WordPress, Joomla, Drupal ...</p>
+        </div>
+        
+        <div class="searchResult">
+            <p><cite>www.website.com</cite><i class="fas fa-sort-down"></i></p>
+            <a class="blockLink "href="" target="_blank">Create Your Website for Free | Free Site Builder | Website.com</a>
+            <p>Domain names, <b>web</b> hosting, <b>website</b> templates, and ecommerce solutions ... <b>Build</b> a credible </p>
+            <p>brand identity with your custom domain name - included for free ...</p>
+        </div>
+        
+        <div class="searchResult">
+            <p><cite>www.google.com</cite>> business > website-builder<i class="fas fa-sort-down"></i></p>
+            <a class="blockLink "href="" target="_blank">Free Website Builder For Your Business - Google My Business</a>
+            <p>Let Google <b>build</b> your first <b>website</b> for free. We'll help you create a beautiful <b>website</b> to impress </p>
+            <p>and engage new customers – and establish your business online.</p>
+        </div>
+        
+        <div class="searchResult">
+            <p><cite>neilpatel.com</cite>› blog › from-0-to-launch-6-steps-to-buil...<i class="fas fa-sort-down"></i></p>
+            <a class="blockLink "href="" target="_blank">Build a Website: 6 Steps From 0 to Launch - Neil Patel</a>
+            <p>Ready to <b>build</b> a <b>website</b> ? Here's step by step guide to building and opimizing your first </p>
+            <p><b>website</b>  including what hosting and CMS to use.</p>
+        </div>
+        
+        <div class="searchResult">
+            <p><cite>www.wix.com</cite><i class="fas fa-sort-down"></i></p>
+            <a class="blockLink "href="" target="_blank">Wix.com: Free Website Builder | Create a Free Website</a>
+            <p><b>Build</b> professional <b>web</b> applications with serverless computing and hassle-free coding. Manage </p>
+            <p>all your content from integrated databases, add your own code in ...</p>
+        </div>
+        
+        <div class="searchResult">
+            <p><cite>www.webhostingsecretrevealed.net</cite>› WHSR Blog<i class="fas fa-sort-down"></i></p>
+            <a class="blockLink "href="" target="_blank">How to Create a Website: Step-by-Step Tutorial</a>
+            <p>Oct 21, 2020 — Hosting a <b>website</b> on these “bundle” platforms is usually expensive and less </p>
+            <p>flexible; but you'll get to <b>build</b> a <b>website</b> or online store easily.</p>
+        </div>
+        
+        <div class="searchResult">
+            <p><cite>makeawebsitehub.com</cite></p>
+            <a class="blockLink "href="" target="_blank">How to Make a Website in 2020 - Free Easy Guide to Building ...</a>
+            <p>This site teaches you how to make a <b>website</b> in just 3 easy to follow steps. There's also lots of </p>
+            <p>really useful resources to help you <b>build</b> traffic in 2020.</p>
+        </div>
+        
+        <div class="searchResult">
+            <p><cite>digital.com</cite>>how-to-create-a-website<i class="fas fa-sort-down"></i></p>
+            <a class="blockLink "href="" target="_blank">How to Build a Website - Digital.com</a>
+            <p>Oct 21, 2020 — A comprehensive guide to <b>building</b>  a <b>website</b>, including deciding between </p>
+            <p>WordPress or a  <b>website</b> builder. Plus, tips on customizing and ...</p>
+        </div>
+        
+        <div class="searchResult">
+            <p><cite>www.weebly.com</cite><i class="fas fa-sort-down"></i></p>
+            <a class="blockLink "href="" target="_blank">Free Website Builder: Build a Free Website or Online Store ...</a>
+            <p>Weebly's free <b>website</b> builder makes it easy to create a <b>website</b>, blog, or online store. Find</p>
+            <p>customizable templates, domains, and easy-to-use tools for any type ...</p>
+        </div>
+        
+        <div class="searchResult">
+            <p><cite>createaprowebsite.com</cite><i class="fas fa-sort-down"></i></p>
+            <a class="blockLink "href="" target="_blank">How To Create A Website in 2020: Step-by-Step Guide for ...</a>
+            <p>Jan 20, 2019 — If you're looking for the answers on how to <b>build</b> your own <b>website</b> the ... </p>
+            <p>builders are the “all-inclusive package” of the <b>website building</b> world.</p>
+        </div>
 
         <!--SEARCHES RELATED DIV-->
         <div class="searchesContainer">
