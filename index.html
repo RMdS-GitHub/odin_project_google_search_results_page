@@ -7,10 +7,10 @@
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
         <meta charset="UTF-8">
         <!--Title for the browser tag.-->
-        <title>Project Google Searchpage</title>
+        <title>build this webpage - Google Search</title>
 
         <!--Css external file-->
-        <!--<link rel='stylesheet' type='text/css' href='css/css.css'>-->
+        <link rel='stylesheet' type='text/css' href='css/css.css'>
         
         <!--FontAwesome.-->
         <script src="https://kit.fontawesome.com/f08dd09bd3.js" crossorigin="anonymous"></script>
@@ -23,525 +23,8 @@
         --> 
        
         <!--Css before external file.-->
-        <style>
-        /*FONT COLORS AND OTHER*/
-        
-        /*FONTS*/
-        
-        /*INSIDE THE SEARCH*/
-        /*16px arial, sans-serif, rgba (0,0,0, .87)*/
-
-        
-        /*ICONS UNDER SEARCH BAR*/
-        /*13px arial, sans-serif, #5f6368*/
-
-        
-        /*RESULTS AND SECONDS*/
-        /*14px arial, sans-serif, #70757a*/
-
-        
-        /*BLOC WITH A SEARCH RESULT ALWAYS 4 LINES*/
-        
-        /*FIRST line left side of the div*/
-        /*14px arial, sans-serif, #202124*/
-        
-        /*FIRST line right side, span*/
-        /*14px arial, sans-serif, #5f6368*/
-        
-        /*SECOND line, the blue bold*/
-        /*20px arial, sans-serif, #1a0dab*/
-
-        /*THIRD and FOURTH line, words from search bar in bold*/
-        /*Bold, 14px arial, sans-serif, #5f6368*/
-        /*Not bold, 14px arial, sans-serif, #4d5156*/
-
-
-        /*VIDEOS DIV*/
-        /*h3, 20px Google Sans,arial,sans-serif #202124*/
-
-        /*VIDEO bloc 3 lines*/
-        
-        /*FIRST line*/
-        /*16px, arial, sans-serif, #1a0dab*/
-
-        /*SECOND line*/
-        /*youtube, 14px, arial, sans-serif, #202124*/
-
-        /*BUTTON view all*/
-        /*view all, 14px, arial, sans-serif, #1a0dab*/
-
-
-        /*PEOPLE ALSO ASK DIV*/
-        
-        /*TITLE*/
-        /*h2, 20px, Google Sans,arial,sans-serif, #222*/
-
-        /*ITEMS*/
-        /*16px, arial, sans-serif, #222*/
-
-
-        /*IMAGES FOR BUILD THIS WEBPAGE DIV*/
-        
-        /*BUTTONS*/
-        /*12px arial, sans-serif, #202124*/
-
-
-        /*SEARCHES RELATED DIV*/
-
-        /*TITLE*/
-        /*span, 20px, Google Sans,arial,sans-serif, #222*/
-
-        /*BLUE items*/
-        /*14px, arial, sans-serif, #1a0dab*/
-
-
-        /*GOOOOOGLE*/
-        /*14px, arial, sans-serif, blue link, rgba(0,0,0, .87)*/
-
-
-        /*FOOTER*/
-        
-        /*Normal without bold, 15px, arial, sans-serif, rgba(0, 0, 0, .54)*/
-        /*Bold, 15px, arial sans serif, #333*/
-
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-        }
-        
-        /*START NAVBAR*/
-        /*container for all items*/
-        .divContainer {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            justify-content: flex-start;
-        }
-        /*container for google symbol*/
-        .googleSymbol {
-            order: 1;
-            margin-left: 30px;
-            margin-top: 30px;
-            margin-right: 60px;
-        }
-        /*image from navbar*/
-        #googleNav {
-            width: 96px;
-            height: 32px;
-        }
-        /*container for search box*/
-        .searchBox {
-            order: 2;
-            font-size: 16px;
-            margin-left: 10px;
-        }
-        /*form itself*/
-        #searchBar{
-            margin-top: 20px;
-            border: 1px solid #dadddf;
-            border-radius: 50px;
-        }
-        #searchBar:hover {
-            box-shadow: 0 0 20px #dadddf;
-        }
-        /*input placeholder*/
-        #searchHolder {
-            border: none;
-            font-size: 16px;
-            /*if padding and not margins, border bug*/
-            margin-left: 20px;
-            margin-top: 0px;
-            margin-bottom: 10px;
-            width: 700px;
-        }
-        /*build this webpage text*/
-        #searchHolder::placeholder{
-            color:black;
-            /*firefox*/
-            opacity: 1;
-        }
-        /*button reset*/
-        #buttonReset {
-            border: none;
-            background-color: white;
-            cursor: pointer;
-        }
-        /*button search*/
-        #buttonSearch {
-            border: none;
-            margin-right: 20px;
-            border-left: 1px solid #dadddf;
-            background-color: White;
-            height: 35px;
-            cursor: pointer;
-        }
-        /*reset symbol*/
-        .fa-times {
-            margin-right: 10px;
-            margin-top: 15px;
-            font-size: 24px;
-            color: #80868b;
-        }
-        /*search symbol*/
-        .fa-search{
-            margin-left: 10px;
-            font-size: 24px;
-            color: #4285f4;
-        }
-        /*END NAVBAR*/
-        
-        
-        /*START RIGHT SYMBOLS NAV*/
-        /*multi squares symbol*/
-        .menuSymbol {
-            order: 3;
-            font-size: 24px;
-            color: #80868b;
-            margin-top: 35px;
-            /*this item needs to have auto value to push other item to the end*/
-            margin-left: auto;
-            margin-right: 20px;
-            cursor: pointer;
-        }
-        .fa-th:hover {
-            box-shadow: 0 0 20px #a9acad;
-        }
-        /*user initial image container*/
-        .userSymbol {
-            order: 4;
-            margin-top: 32px;
-            margin-right: 20px;
-            cursor: pointer;
-        }
-        /*image itself*/
-        #googleUser {
-            height: 32px;
-            width: 32px;
-            border-radius: 50%;
-        }
-        #googleUser:hover {
-            box-shadow: 0 0 20px #a9acad;
-        }
-        /*END RIGHT SYMBOLS NAV*/
-
-        
-        /*START 2ND ROW SYMBOLS*/
-        .symbolsRow {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            justify-content: flex-start;
-            padding: 16px 12px 0px 10px;
-            border-bottom: 1px solid #dadddf;
-        }
-        .itemsRow {
-            font-size: 16px;
-            text-decoration: none;
-            color: #5f6368;
-        }
-        /*all symbols <i> from row*/
-        .sy {
-            font-size: 18px;
-            margin-left: 30px;
-            margin-right: 5px;
-            margin-bottom: 15px;
-            margin-top: 20px;
-        }
-        /*magnifying glass*/
-        #all {
-            margin-left: 200px;
-            border-bottom: 3px solid #4285f4;
-            margin-top: 20px;
-            color: #4285f4;
-        }
-        #allSymbol {
-            font-size: 18px;
-            margin-right: 5px;
-        }
-        /*settings link*/
-        #settings {
-            margin-left: 140px;
-        }
-        /*END 2ND ROW SYMBOLS*/
-
-        
-        /*TOTAL RESULTS LINE*/
-        .totalResults {
-            color: #5f6368;
-            margin-left: 220px;
-        }
-
-        
-        /*START SEARCH RESULT BLOCK*/
-        /*container itself*/
-        .searchResult {
-            font-size: 16px;
-            margin-left: 220px;
-            line-height: 0.8;
-            margin-top: 30px;
-            margin-bottom: 45px;
-        }
-        /*first part, the website*/
-        cite {
-            font-style: normal;
-            color: #202124;
-        }
-        /*the rest of lines are paragraphs*/
-        p {
-            color: #5f6368;
-        }
-        /*the <a> inside the block*/
-        .blockLink {
-            color: #1a0dab;
-            font-size: 24px;
-            text-decoration: none;
-        }
-        /*the <a> inside the block underline when hover*/
-        .blockLink:hover {
-            text-decoration: underline;
-        }
-        /*inverted triangle at the end of some 1st p*/
-        .fa-sort-down
-        {
-            margin-left: 10px;
-            cursor: pointer;
-        }
-        /*END SEARCH RESULT BLOCK*/
-
-        
-        /*START VIDEOS DIV*/
-        /*the symbol video before the h3*/
-        #videoSymbol {
-            margin-left: 220px;
-            font-size: 22px;
-            color: #5f6368;
-            margin-top: 0px;
-        }
-        /*the h3 videos*/
-        h3 {
-            font-size: 24px;
-            /*font-family: 'Open Sans', sans-serif;*/
-            font-family: 'Noto Sans', sans-serif;
-            color: #202124;
-            font-weight: normal;
-            margin-bottom: 5px;
-            display: inline;
-            margin-left: 10px;
-        }
-        /*the container for the videos items*/
-        .videosContainer {
-            margin-left: 220px;
-            width: 800px;
-            height: 400px;
-            border: 1px solid #dfe1e5;
-            border-radius: 8px;
-            margin-bottom: 60px;
-            padding-bottom: 0px;
-        }
-        /*container for each video + text*/
-        .videoBlock {
-            border-bottom: 1px solid #dfe1e5;
-            margin-bottom: 20px;
-        }
-        .videoBlock:hover {
-            background-color: #f5f5f5;  
-        }
-        /*the link for the videos*/
-        .videoLink {
-            color: #1a0dab;
-            font-size: 20px;
-            text-decoration: none;
-        }
-        .videoLink:hover {
-            text-decoration: underline;
-        }
-        /*class for the videos*/
-        .video {
-            margin-left: 20px;
-            border-radius: 8px;
-        }
-        /*first video margin*/
-        #firstVideo {
-            margin-top: 20px;
-        }
-        /*remove bottom border last video*/
-        #lastVideo {
-            border-bottom: none;
-        }
-        /*container for each item block text*/
-        .videoTextBlock {
-            margin-left: 10px;
-            display: inline-block;
-            line-height: 0.8;
-        }
-        /*div for the two items*/
-        #divTwo {
-            color: #1a0dab;
-            font-size: 20px;
-            text-decoration: none;
-            background-color: white;
-            border: 1px solid #dfe1e5;
-            border-radius: 50px;
-            padding: 10px 10px 10px 10px;
-            margin-left: 220px;
-            margin-right: 200px;
-            cursor: pointer;
-        }
-        #divTwo:hover {
-            background-color: #f5f5f5;  
-        }
-        /*the a link*/
-        .viewAll {
-            text-decoration: none;
-            color:#1a0dab;
-            margin-left: 120px;
-        }
-        /*the arrow*/
-        .fa-arrow-right {
-            margin-left: 10px;
-        }
-        /*END VIDEOS DIV*/
-
-        /*START IMAGES DIV*/
-        /*div containing image symbol and title*/
-        #imagesDiv {
-            margin-bottom: 80px;
-            height: 270px;
-            border-bottom: 1px solid #dfe1e5;
-            margin-left: 220px;
-            width: 790px;
-        }
-        #imageTextDiv {
-            cursor: pointer;
-            margin-left: 190px;
-            font-size: 22px;
-            color: #202124;
-            margin-top: 0px;
-            width: 440px;
-        }
-        /*div containing image symbol and title hover*/
-        #imageTextDiv:hover {
-            color:#1a0dab;
-        }
-        /*the title of the div*/
-        h2{
-            font-size: 24px;
-            /*font-family: 'Open Sans', sans-serif;*/
-            font-family: 'Noto Sans', sans-serif;
-            font-weight: normal;
-            margin-bottom: 5px;
-            display: inline;
-            margin-left: 10px;
-        }
-        /*container for the links*/
-        .imgLinksRow {
-            margin-top: 20px;
-        }
-        /*class for all the links*/
-        .itemsRow2 {
-            font-size: 16px;
-            text-decoration: none;
-            color: #5f6368;
-            border: 1px solid #dfe1e5;
-            border-radius: 50px;
-            padding: 10px 10px 10px 10px;
-            margin-left: 10px;
-        }
-        .itemsRow2:hover{
-            background-color: #f5f5f5;  
-        }
-        /*first button for the margin*/
-        #firstImgLink {
-            margin-left: 0px;
-        }
-        /*last button for the margin*/
-        #lastImgLink {
-            margin-left: 40px;
-        }
-        /*div containing the images*/
-        .imagesBlock {
-            margin-top: 20px;
-        }
-        /*the button at the right of the image*/
-        #buttonImages {
-            margin-left: -30px;
-            margin-top: 55px;
-            border-radius: 50%;
-            position: absolute;
-            padding: 15px 15px 15px 15px;
-            background-color: white;
-            box-shadow: 0 0 20px #a9acad;
-        }
-        /*the button at the right of the image hover*/
-        #buttonImages:hover {
-            color: #202124;
-        }
-        /*report images link*/
-        .itemsRow3 {
-            font-size: 16px;
-            text-decoration: none;
-            color: #5f6368;
-            margin-left: 680px;
-            position: absolute;
-            margin-top: 15px;
-        }
-        /*view all button*/
-        #divThree{
-            color: #1a0dab;
-            font-size: 20px;
-            text-decoration: none;
-            background-color: white;
-            border: 1px solid #dfe1e5;
-            border-radius: 50px;
-            padding: 10px 10px 10px 10px;
-            margin-left: 220px;
-            margin-right: 200px;
-            cursor: pointer;
-            margin-top: 47px;
-        }
-        #divThree:hover {
-            background-color: #f5f5f5;  
-        }
-        /*END IMAGES DIV*/
-
-        
-        /*PEOPLE ALSO ASK LIST*/
-        .peopleContainer {
-
-        }
-        .peopleList {
-
-        }
-
-        /*SEARCHES RELATED DIV*/
-        .searchesContainer {
-
-        }
-        .searchesList {
-
-        }
-
-        /*GOOOOGLEEE*/
-        .gotrainContainer {
-
-        }
-        .trainSymbols {
-
-        }
-        .trainList {
-
-        }
-
-        /*FOOTER*/
-        .footerContainer {
-
-        }
-        .footerRow {
-            
-        }
-
-        
-       </style>  
+        <!--<style>
+        </style>-->
     </head>
 
     <body>
@@ -550,7 +33,7 @@
         <div class="divContainer">
             <!--google symbol-->
             <div class="googleSymbol">
-                <img id="googleNav"src="images/googleLogo.png" alt="Google Symbol">
+                <img id="googleNav"src="https://res.cloudinary.com/dzsfosvef/image/upload/v1604668429/googleLogo_gjda58.png" alt="Google Symbol">
             </div>
             <!--search box-->
             <div class="searchBox">
@@ -567,7 +50,7 @@
             <div class="menuSymbol"><i class="fas fa-th"></i></div>
             <!--user image-->
             <div class="userSymbol">
-                <img id="googleUser"src="images/nameSymbol.png" alt="Google User Inital">
+                <img id="googleUser"src="https://res.cloudinary.com/dzsfosvef/image/upload/v1604668403/nameSymbol_d1htvy.png" alt="Google User Inital">
             </div>
         </div>
             <!--END RIGHT SYMBOLS NAV-->
@@ -746,7 +229,7 @@
             </div>
             <div class="imagesBlock">
                 <a href="" target="_blank">
-                <img id="images"src="images/imagesDiv.png" alt="Multiple Images">
+                <img id="images"src="https://res.cloudinary.com/dzsfosvef/image/upload/v1604668418/imagesDiv_idwhlp.png" alt="Multiple Images">
                 </a>
                 <a id="buttonImages"class="itemsRow2" href="" target="_blank"><i class="fas fa-chevron-right"></i></a>
             </div>
@@ -780,20 +263,62 @@
         </div>
 
         <!--SEARCHES RELATED DIV-->
+        <h3 id="searchH3">Searches related to build this webpage</h3>
         <div class="searchesContainer">
-            <div class="searchesList">search list left</div>
-            <div class="searchesList">search list right</div>
+            <div class="searchesList">
+                <a class="videoLinkSearch "href="" target="_blank">create professional website</a>
+                <a class="videoLinkSearch "href="" target="_blank">github</a>
+                <a class="videoLinkSearch "href="" target="_blank">css only website</a>
+                <a class="videoLinkSearch "href="" target="_blank">the odin project</a>
+            </div>
+
+            <div id="rightSearch"class="searchesList">
+                <a class="videoLinkSearch "href="" target="_blank">web development</a>
+                <a class="videoLinkSearch "href="" target="_blank">web developmet projects for practice</a>
+                <a class="videoLinkSearch"href="" target="_blank">web project</a>
+                <a class="videoLinkSearch "href="" target="_blank">project on web design</a>
+            </div>
         </div>
 
         <!--GOOOOGLEEE-->
         <div class="gotrainContainer">
-            <div class="trainSymbols">Goooooooogle</div>
-            <div class="trainList">1 2 3 4 5 6 7 8 9 10 Next</div>
+            <div class="trainSymbols">
+                <a class="videoLinkSearch "href="https://www.google.com/search?q=build+this+webpage" target="_blank">
+                    <img id="googleTrain"src="https://res.cloudinary.com/dzsfosvef/image/upload/v1604668429/googletrain_ntnhey.png" alt="Google Train Links">
+                </a>
+            </div>
+            <div class="trainList">
+                <a id="t1"class="numbersTrain" target="_blank">1</a>
+                <a id="t2"class="numbersTrain"href="https://www.google.com/search?q=build+this+webpage" target="_blank">2</a>
+                <a id="t3"class="numbersTrain"href="https://www.google.com/search?q=build+this+webpage" target="_blank">3</a>
+                <a id="t4"class="numbersTrain"href="https://www.google.com/search?q=build+this+webpage" target="_blank">4</a>
+                <a id="t5"class="numbersTrain"href="https://www.google.com/search?q=build+this+webpage" target="_blank">5</a>
+                <a id="t6"class="numbersTrain"href="https://www.google.com/search?q=build+this+webpage" target="_blank">6</a>
+                <a id="t7"class="numbersTrain"href="https://www.google.com/search?q=build+this+webpage" target="_blank">7</a>
+                <a id="t8"class="numbersTrain"href="https://www.google.com/search?q=build+this+webpage" target="_blank">8</a>
+                <a id="t9"class="numbersTrain"href="https://www.google.com/search?q=build+this+webpage" target="_blank">9</a>
+                <a id="t10"class="numbersTrain"href="https://www.google.com/search?q=build+this+webpage" target="_blank">10</a>
+                <a id="t11"class="numbersTrain"href="https://www.google.com/search?q=build+this+webpage" target="_blank">Next</a>
+            </div>
         </div>
        
         <!--FOOTER-->
         <div class="footerContainer">
-            <div class="footerRow">footer row 1</div>
-            <div class="footerRow">footer row 2</div>
+            <div id="r1" class="footerRow">
+                <span id="s1" class="spanFooter">Planet Mars</span>
+                <span id="s2" class="spanFooter"><i class="fas fa-circle"></i>20°N,135°W, Olympus Mons</span>
+                <span id="s3" class="spanFooter">-</span>
+                <span id="s4" class="spanFooter">From your Location History</span>
+                <span id="s5" class="spanFooter">-</span>
+                <span id="s6" class="spanFooter"><a class="spanLinks" href="https://www.google.com/mars/" target="_blank">Use precise location</a></span>
+                <span id="s7" class="spanFooter">-</span>
+                <span id="s8" class="spanFooter"><a class="spanLinks" href="https://support.google.com/websearch/" target="_blank">Learn more</a></span>
+            </div>
+            <div class="footerRow">
+                <span id="s21" class="spanFooter"><a class="spanLinks" href="https://support.google.com/websearch/" target="_blank">Help</a></span>
+                <span id="s22" class="spanFooter"><a class="spanLinks" href="" target="_blank">Send feedback</a></span></span>
+                <span id="s23" class="spanFooter"><a class="spanLinks" href="https://policies.google.com/privacy" target="_blank">Privacy</a></span></span>
+                <span id="s24" class="spanFooter"><a class="spanLinks" href="https://policies.google.com/terms" target="_blank">Terms</a></span></span>
+            </div>
         </div>
     </body>
